@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- para o frontend, faça assim -->
+    <link rel="shortcut icon" href="../static/img/favicon.ico">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <!-- para o backend, faça assim -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Página gerada por Servidor</title>
+</head>
+<body>
+<div class="container">
+<div class="center white-background">
+    <nav>
+            <div class="logo">
+
+                <h4><a href="pagina_inicial.html#inicio" class="inicio_class">PAGINA INICIAL</h4>
+            </div>
+            <ul class="nav-links"> 
+                <li class="no-marker"><a href="{{ url_for('server_generated_page') }}">Server Page</a></li>
+                <li class="no-marker"><a href="{{ url_for('ajax_generated_table') }}"> Tabelas </a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+            </div>
+          </nav>
+
+    <h1 class="center">Está na hora de ouvir música!<br/></h1>
+    <div>
+        <!-- começo do trecho de código gerado pelo servidor -->
+        {% autoescape false %}
+        <br/>
+        {{ Preferidos }}
+        <br/>
+        {{ Video_1 }}
+        <br/>
+        {{ Video_2 }}
+        <br/>
+        {{ Video_3 }}
+        <br/>
+        {{ Video_4 }}
+        <br/>
+        {{ Video_5 }}
+        <br/>
+        {{ Video_6 }}
+        <br/>
+        {{ Video_7 }}
+        <br/>
+        {{ Video_8 }}
+        <br/>
+        {{ Video_9 }}
+        <br/>
+        {{ Video_10 }}
+        {% endautoescape %}
+        <!-- fim do trecho de código gerado pelo servidor -->
+    </div>
+</div>
+</div>
+</body>
+</html>
