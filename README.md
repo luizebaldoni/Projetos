@@ -17,3 +17,4 @@ Nesta pasta possui as atividades realizadas na disciplina de matematica computac
 ## Outros Projetos:
 - [Heltec ESP32](https://github.com/luizebaldoni/PROJETO-HELTECESP32)
 - [Motor controlado por App Bluetooth](https://github.com/mBrond/motorBluetooth) (projeto colocado no github na fase final)
+- [Estuda Vagao](https://github.com/luizebaldoni/EstudaVagao)
