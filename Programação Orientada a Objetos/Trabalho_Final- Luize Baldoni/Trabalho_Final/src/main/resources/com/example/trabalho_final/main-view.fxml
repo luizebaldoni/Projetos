@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="833.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalho_final.MainController">
+
+    <MenuBar prefHeight="27.0" prefWidth="833.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Menu text="Arquivo">
+            <MenuItem onAction="#onCarregarRegistro" text="Carregar Registros" />
+            <MenuItem onAction="#onSalvarRegistro" text="Salvar Registros" />
+            <MenuItem onAction="#onExportarCSV" text="Exportar CSV" />
+            <MenuItem onAction="#onGerarRelatorio" text="Gerar Relatório Financeiro" />
+        </Menu>
+        <Menu text="Configurações">
+            <MenuItem onAction="#onVerificarLimite" text="Verificar Limite de Gastos" />
+        </Menu>
+    </MenuBar>
+
+    <VBox layoutY="39.0" prefHeight="644.0" prefWidth="401.0" spacing="20" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="412.0" AnchorPane.topAnchor="39.0">
+
+        <Label style="-fx-font-size: 15;" text="SALDO">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+
+        <Label fx:id="saldoLabel" prefHeight="47.0" prefWidth="383.0" style="-fx-font-size: 50;" text="0.00">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="365.0" spacing="10">
+            <Label alignment="CENTER" contentDisplay="BOTTOM" text="Descrição:">
+            <font>
+               <Font name="Trebuchet MS" size="20.0" />
+            </font></Label>
+            <TextField fx:id="descricaoField" prefHeight="22.0" prefWidth="163.0" promptText="Exemplo: Aluguel, Supermercado" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Montante:">
+            <font>
+               <Font name="Trebuchet MS" size="12.0" />
+            </font></Label>
+            <TextField fx:id="montanteField" promptText="Exemplo: 1500.00" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label text="Tipo:" />
+            <ComboBox fx:id="tipoComboBox" prefHeight="38.0" prefWidth="367.0" promptText="Tipo de transação" style="-fx-border-radius: 5; -fx-pref-height: 25; -fx-background-color: #ECF0F1; -fx-padding: 5;" stylesheets="@style.css">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Montante" />
+                        <String fx:value="Despesa" />
+                        <String fx:value="Receita Fixa" />
+                        <String fx:value="Investimentos" />
+                        <String fx:value="Empréstimos" />
+                        <String fx:value="Metas de Poupança" />
+                        <String fx:value="Impostos" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="20">
+            <Button onAction="#onAddRegistro" text="Adicionar Registro" />
+            <Button onAction="#onRemoveRegistro" style="-fx-background-color: red;" text="Remover Registro" />
+        </HBox>
+        <Label text="Limite de Gastos:" />
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button onAction="#onDefinirLimite" style="-fx-background-color: orange;" text="Definir limite de gastos" />
+            <Button onAction="#onVerificarLimite" style="-fx-background-color: blue;" text="Verificar Limite" />
+        </HBox>
+
+    </VBox>
+
+   <VBox layoutX="437.0" layoutY="39.0" prefHeight="598.0" prefWidth="376.0">
+      <children>
+
+           <Label text="Registros de transações:" />
+           <ListView fx:id="listView" prefHeight="546.0" prefWidth="376.0" />
+
+           <HBox spacing="10">
+               <Label text="Detalhes do Registro Selecionado:">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin></Label>
+           </HBox>
+      </children>
+   </VBox>
+</AnchorPane>

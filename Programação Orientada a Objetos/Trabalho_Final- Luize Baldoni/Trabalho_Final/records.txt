@@ -1,0 +1,2 @@
+Expense,salario,5000.0
+Expense,almoço,35.0

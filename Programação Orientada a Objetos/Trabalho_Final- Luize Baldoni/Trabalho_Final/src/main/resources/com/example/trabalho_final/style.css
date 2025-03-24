@@ -1,0 +1,80 @@
+
+
+.anchor-pane {
+    -fx-font-family: "Trebuchet MS";
+    -fx-background-color: #F7F9FC; /* Cor de fundo suave */
+}
+
+/* MenuBar */
+.menu-bar {
+    -fx-background-color: #82c0fc; /* Cor de fundo do Menu */
+    -fx-text-fill: white; /* Cor do texto do Menu */
+}
+
+/* Labels */
+.label {
+    -fx-font-family: "Trebuchet MS"; /* Fonte mais moderna */
+    -fx-font-size: 14px; /* Tamanho da fonte */
+    -fx-text-fill: #34495E; /* Cor do texto */
+}
+
+/* Títulos */
+.label.title {
+    -fx-font-size: 22px; /* Tamanho maior para títulos */
+    -fx-font-weight: bold; /* Negrito */
+    -fx-text-fill: #2C3E50; /* Cor do texto */
+}
+
+/* TextFields */
+.text-field {
+    -fx-pref-width: 200px; /* Largura padrão */
+    -fx-padding: 10; /* Espaçamento interno */
+    -fx-background-color: #ECF0F1; /* Cor de fundo */
+    -fx-border-color: #BDC3C7; /* Cor da borda */
+    -fx-border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-pref-width: 200px; /* Largura padrão */
+    -fx-background-color: #ECF0F1; /* Cor de fundo */
+    -fx-border-color: #BDC3C7; /* Cor da borda */
+    -fx-border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Botões */
+.button {
+    -fx-background-color: #27AE60; /* Cor de fundo padrão */
+    -fx-text-fill: white; /* Cor do texto */
+    -fx-padding: 10; /* Espaçamento interno */
+    -fx-font-size: 14px; /* Tamanho da fonte */
+    -fx-font-weight: bold; /* Negrito */
+    -fx-background-radius: 5px; /* Bordas arredondadas */
+}
+
+.button:hover {
+    -fx-background-color: #219653; /* Cor ao passar o mouse */
+}
+
+/* Botão de Remover Registro */
+.button.remove {
+    -fx-background-color: #E74C3C; /* Cor de fundo para remover */
+}
+
+.button.remove:hover {
+    -fx-background-color: #C0392B; /* Cor ao passar o mouse */
+}
+
+/* ListView */
+.list-view {
+    -fx-pref-height: 200px; /* Altura padrão */
+    -fx-background-color: #ECF0F1; /* Cor de fundo */
+    -fx-border-color: #BDC3C7; /* Cor da borda */
+    -fx-border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Label do saldo */
+.label.saldo {
+    -fx-font-weight: bold; /* Negrito */
+    -fx-text-fill: #2C3E50; /* Cor do texto */
+}
